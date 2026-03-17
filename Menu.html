@@ -2,115 +2,106 @@
 <html>
 <head>
     <title>Sandwich Shop Menu</title>
+    <style>
+
+.menu {
+    height: 550px;
+    width: 400px;
+    margin: 20px auto;
+    border: 3px solid #333;
+    padding: 20px;
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAywMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAQIDBAYAB//EAD0QAAIBAwMBBQYDBgYCAwEAAAECAwAEEQUSITEGE0FRYRQiMnGBkSOhsRUkQlJi8DNyksHR4RbxJUNzB//EABkBAAMBAQEAAAAAAAAAAAAAAAECAwQABf/EACURAAICAgICAgIDAQAAAAAAAAABAgMREiExBCITQTJRFGGhBf/aAAwDAQACEQMRAD8AxZiUQrjqTULjYKlD7ii+VKyh3xWJM9Zoq3b/ALm1UrRN8fNXr5R7I2Kr6XCXyecYp88EmvYkkhjRQVJOajAxT5iwYjBAqMUyFkkPFSA4FRKaUsK4Uk3U9TUANPBrh0ybqadio1NSMaQccoqIrhyamT4c1Gx8aGTsCGmMfeFc2R9abg7qKAx7fCT41yDIxTin4dNQEUwBGUCoiMVKck0pQ46VwGmQg1bQZUfOq4Qjwq3AMlR60sgxRPrRwkS/0UCY5NGdZP4wU+CigrdaavoWfYx+lRYFSnmmbaoTYbxyT5UqfEzelLj3M+JNIeCcVnNZWu2/AYU2wl7tcUt5/gtUVtjaPlTfQj/IluCXfPSodtTEgsaTGKZPgVrkjCHwpwTLYIp5HPFSwplxXZOSIGhK+NM8asznnFQEVyA+Bytipo1eZ1jiRnkc7VVRksfIVWHjnPAr1Hszof7D01LyeFfbJU3Oz/8A1qf4Qft88+lRvtVcdilcXJ4MHe2txp67LqExtyMEg/pVRG3CvR9QsodQVonUsSvxOvXzzj8qxuqaDPYSjuY3ZORhiM/TzqNN2y9ik4YfAKbnHFKhGeRSupTIYEMDgg+FQgk+NaSb4HNIDkeFJHJyOK7pSqAfCiAkwDzXBvCowxBxXNlea44lC1Lbj8RR61DDIG61btkLTLjpSsZEOrMGu2A/hAH5UImXHIq/qEmL2f0OPyofJJuOKeHROfY0DimE81KpzURHJp0TaCokK+6aXfmmSgZ4puanguNuz+A1V4hwKsXQ/A+tMiXgURccigHeamC8V22uJpRsCdDTu82HiomyDSjnmiAvaZZS6tqFvY223v532ruOB8z9K07/AP8AO7kO0aatbs4OCDAwH61mdNs9RuJ1m0xZO8hYMJgdoQj+o8ZrawdqNR0sxJrdn7YuwO9zb8MD644PzGBzU5WJPGR41t8tASfsDrdt70b2coHQrKQT/qAH51qbbUpL+yi0/Vraaz1JUYFWH4c/HVWU7fzHpWld1u9LS5sWWRZo98L4yDkZFYK+uLyaWWG7jD+PDYZceOP79Knf7LDNnheI7+YvGA3exokHeWUQWWAATLnAx4HzOahiXvbQyXDh4d3d/L5Hr50U0l7TVdHCLLJ7bCu1u+OTzn7jHT5c81Ru7SVbOKKONHt4zv2RKfePiD+n2rPKOOyU04yaf0A9V0BJgSgAkYgL72c+fPhxisnd6fc2juZIW2DneOmK9CjuwXWJ0kBAChSmcZ8iOM/eqlwcR5nRXjYkb8cA8nB+3/qujbKAmux58XXaDikR8EGtJrOgCVjNYFSHG7b/ABZxn9f1rNNG8R2yIVbyIrbCyM0RlFolxu5psp3YFRmXHFM7wmqYFyWYxtYYonZf4gx5UHjfkGjGkHfcnPQCpyQ6YD1Fv3y4/wD0NUGPNX7vDTykeMjfrVJl5q0eiMux0ZriBmuUYFdXHYC3d/ghs+NQgZbAqd3HdhR0qNMA5qayVG3q7YKgicACpdRf93JofHISabHAueQomGpDgNikg6ZpJOuc0o451HWm/wAPHJ8qUHKinIAOlcA9R0bRrKy0aALcR3EL++rDjcSDk9eR4AD86l1ZLU2VsWiwv8TqMgN4Z4zzz9ayfYjtDBZ3fsesyp7AI27pnXOx8jg+h5+tbCUQCdJFiWUXThz3ZDb12k7R6H08MV51tUoy2ZaM8rj6KGhatBoN/wCwyCKOwuHGwF/hdj4L1HPJx4A1bv8AS21F5g+INQjYiOQLwy+APmPWhnajQ5ruNZ7Ze5vrQq4jXqOhDD5Gkn7UXuk6nHDrduJYZVV0n2YeIt1GRwcHp+tPVPPrJ8kqvJnTY2uwXKk1vOVjkaC+Q5JQ4I/6pLPtRd21yE1BFDk8sBtSb/g+ta3XrGz1OGO8EqqqoHjuoBkFT5+Y86x3aC29ltwl/BkSfBMgzGw8MH+/GnlBdfR7kLK/Kis9mqeG31e1aWxcJKfBh8DeR8qp91JaqS697HEhV1dgSST7pHmOT5VktB1qTSbvDHvFIwvvY3D+U+vlWuvnW+s4NS093cPygbgPzyreRHNSa14fX7PNvpdU8FZYRGG7lipK7lGMkeZHp6UN1aKC+bMioCRgheDmird6kbTBUyHGQv8AKWxnHnzTLmCOcH2iLZIpG07sZ+R+dLzF8E8p8GDvdJubZ/hJjI3KSeD96HnKnB4PkeDXoFxviBE6B4tvwN0l/Lg0L1PQI7pu+sPe3YG1s5+9aa/J+pE5VfaMvFkkCjukDazHyWg8lrLaTKsoIz5ggj0NGNKbKTMPBK0SaksomuOzOuxZ2PmSaYBS7hk124VVCHHgGo6kbkVFXAyEVDnqrfapERv5W+1aFhG7E92APlUbBV/hH2pNi2hnNQR/ZyAp+1U7SCRnA7piT0AHWtaQr8bM+gFFILM28McoWIvbSB5rfjc4OON3hgZ+9TsuUETsSgtmY+NWVtm1t2cYxzW70DRNPtYVW9tfaLxztYyYwp/pHTjzqx2bsrZnmv8AunKIT7LHJ8Qb5jr5UTjI7xy1vtl2YO3685rzL/KcuFwa/HgpQ2kPn0mxnkAkgiGVACiIZGcnBA+XWs1edkNrkxxPsJyoD9RzkZx16edbZZ45s96RtBVTnxPkP786vJZoAqxqDDxnJ4I/vFCDl3FhlJL8keaSdiopo91reSwSeEVzHuyfRlx+lEOzM2sdn2/ZWpwFdNct3dzHlu5bk593nBPn0zmt09rG65OUB4yV6HH3pjWAjcFWZTgeHXjz4/sVb5LMYlyiT0fK4BGpzi1W2kt/jMh7wMcqVPuncc88Y6VHrtpZ3ukXFxM6xIgwd+ApyAc+nWiLoTi3EJeLxKoAM/31qO6s4b+wmtrmOEhlMchC9M8ZH1xSQn+mLdD1ygP2Pa2treC0QusUyiNklfISUZBIz/Nxn5g+NC+0QvezNxM9pGtzpshy9rMMqR44/lP5elBtc7O6npkbwpqP/wAcqkxGYluPHGM4Fa7s9rEHbTs4RJtbULX3JwB8TY+IejAZx5g1qoTw23nkl4d+stJGK1GwsHS31PT0J028DLtk6xSeIPketEOyD+yyTaLct3lleZaNs8o/l6ZH5j1q3qmkLp3YqaFco0l6JIUPh549OKyB9uvbNGtVMcqyByw6ZXpj601kNuD2fkhZW1LloK3C61p63Qutahit7adlJkh3ybeCD4ZzminZ7VItQkeE3UV4VO9G2lQwAyRtJ6/eqmpqe0HZw3txblrmFe7vIVOCMdJF+XX5E0C0W21DR7i0SyRLm7t3732cDJmSVRtOPln7ilit4vZ4aPBm5V2Z+jfSrDOXjg24AxjqM9cUMBlsrvG4FWUgkjAHkf8AqpOzl3f6gb17i3MPs1wqyDkHceCpHnRiexgnt5kiZndMnawDeHgemahKOr5NldmyyBdX06PWbUyxsVlTlVI6/OstbTm2hnRhhiCK2EEM9hOAjF4nJyRH8PH5UF7VaUVja/tcFOO8Qfw+tWonzqzpoxrRFepFJsx41NwTk1II1PWt+TPgrA0mKsmNaTC+VdkGprj04FROR4ipww8sVEyKx4JqRq7LegokurW6O6xrktvfGI8AkNz1wfCjF5Y28tnJBp6w3UgZd0h94kk/FnHB8cVl2SjvZiMwI99OzdwJljWMZOW6k+XTj54rF5lTa+TPRC6Kxlmpv9Cn0qOKS3JkiXiTn4TnPX50+G4jn/EQ7WxlTnnB4NaXUL9DpXfREkOoKnzB5rD2UndbzHjYclM9cnmoW0xjL0+zTRa5R9vovrC8qbiybNwOAv1HP1q9azu8ciygkk8c4BHODihA1B1YezNsG3p/D5GuW/kSNljO2McNt4OPOpxg4jykmsMNNdJFH7OrLkEeBHT+zTY71jgSIVIJALLkgc/9UCN80pHeMOVx0zVea/SBWYxHPw+6nJwf0p3sKlHBoJHSR1AgZ1zwDwQR4jz86qSNc2ihnLShhzwCQOQP+fpWfvddSwZGu5whfoeTnp9utUNd7RQ20WxrvdcYyEGW8vUUVTJ9Cu6EeGzTXgGtaa1n+G6tnaWXcp6Hpx4f71irpbns130OkobO5hfvU9zIl3Fc5HOBhCuPDz5puh9pbi0mBuZP3abkZA3JnqByMA1rpE0rX7cyXL7tp2hkkYEKeoOPp9qvDNb/AKMt1e/tEEafrUPa4m3nBg1OBSWt36N5lP8Acdahvbq60PS7dtKtIZirul1I4z3bK2MYqvqWmwaZILmBbXvY12RSqW7xD4Ec8HGeSaA6JrWqxa1eO8ntD3jM0kToMSOBxwOOQMfatMZRk3gC8mUfWQeTtjapF7Rcaf3V0CNzRfBIu4bgfXGcVPeQiPWbPtJpDx3EDwiIxjgFFXbwfDC4+q0OsbrQe04ECBtPvXOEhlxhj/Sen06+lELW3Og24tO77yIn8WDoW/qVumTn7AA1C+Ditl2X+H+THESzfTtchtb0kd4xXZdRHpOo6qw8HHgfL6UQsrgT20UunuZY5HJUAkbRjnOPH7ZoKNP1O2muNU7MlZ4XIeXT5eDKm0YbHg3h9PGhWna1Kbi4n0dZYJ0IN1psvBJ81B4I6+R9KSCzD94/wyQlKp8m9WMzozK6kqm6TrluM4HiPHBFC0YRRokiu1tKnIK84Hga7Re0VhrFsTEBb3SZSS0kJQ89PGiXvd4GdWUBywKnoOfGg4tM1wmpI8613QZdPlM0IDWkjfhuPDyBoXjbwa9TvLeKS3eJNriT3Xik4B+VYjWNDewbvo/etW6HxT0P/Na6r8rWQrh9gFznoKiwfKrpjWk7oVoyhMGqcDwC/erWm6LqWqnFhaPKM8yZAQefvHihrGQHx+1eqdmLto+xti9pAZZQSjIvHvFjyx8B4k0sUmUtm4Lgxj9g+0S5Pd2jei3HP5gUSsuzGs2FnbxS7GRy0ksQYOqt/DkeJ46itlqFxIEURNgjrtPFB7/W7m1tZGAJccLnzrN5ShKtpgrptuwkVNT1V7G0Szu7J1jMeCYce6cnwzWE/bk8N2I/Y2aDOSWbaa1BD6lbGWa4SO45HdHxPHvfKhp03aze0vbDI4bvBj7V49V8l2hn416k4dAi57SiGUstluU56SDn58iq1x2uSVykBSCQdQynP3I5+lGDp2luMtdWxA67Mt+lDZrDs/BPHLbpNdThuEG5F+vn/wB1sqvjLhxY8vDufTJF168liALW0R29BCWz+WKln1DUNQVEgMa7QMlIiD96in1lIG2WthbxsW6uC2R4/wC1VTqd7dXQDSEW4I/DjGwflyaaMbZc4BLxdV7MF6lpc7zB7q8gkRTyjttOfXzNTRJpMcRkkse/ZcAlnCgH5A5Pzqtqd7H+1rvTb2JHttw2Nt96PKhuvU9asnTNqBQ4KgdACOPnWtwlhJsl49dOzcile6o0uFgtLaJV4AVNxH3qnb63qGmXO9JNyHCmM5Ax16DFE30mPvjI3uRgcgHg+uaF3klmCDBsfJIJRgennVIVpF7bK10bXRL631q3G4hkGO9Tccqx8/Hz/KrGg9mrdu0D7JnR9qy2zNghmAOUPqODnx5rz2x1B9MvFliVlU43Db1H1Fel6ZepcW8F3ABv2CQSZ5PGMDPjn5VGcNH/AEzJKMblx2ee6nbLY9odm0rEl8EYY5jJPI/Pg+WK9g1DTLaaD2Pv++uYEGAGHeYPnnz6Vg+1ukyXUkmpQ7phMoW5jT4uOVf/ADD/AKq1Df8A7Ze01rTZ86vZxiK5g+EzIOvHkRn5Hp0qrcbI8HeO5Vyw3gIX2jzWk0urWWoSrNtCSoDgxkeA9Oehqlctp2vlDqsaW1+BiLUbcbd3o39/aiOvarZ95FJqCTR2k8YMN5CDlP6XX0/sVnL62uNIZblcXumS8tLEQwx5+lRnU8Zj2ejWqpw0mirqUN9oV2ItUt/aGwTHOMKzr6N4/I+lXdM7aW8zCyvw0KgAIz/F18Wzgj0OPCjcd3pes2sek30veQzD91n3cxN4DP8AflXn/aXRLiyvpbSSIK8JyCT8aeDD8qFMo2es1hnm+TRPx5ZXR6WA23MUizCYBlYsCpx5+Rxj61NcT70l79Ay8qQMbfl5V552Lv71JPZcu9sQQ0Zbp8vKtxYaglxZJc2sqlZAWAZRnd/EDn50soavA9Vu3ZPonZjRLyV0mSRyRvRll90AHkfSjo7GaABj2IHHm5/5ofoE8UepOVUoDuOwYC5bngVpvam8Ij96aNjxyPJPPBg4Ipbw/gaY7+qRsa23ZO3utK0669tt5IleQMsfHTHJrSAogxuAA6ClYJJEUyCPHitMYtconO7dYa4BEzwFO8hfdCxy3PwmhWoWsOoWzLHOsbD3uatavpulQRPLcSez56lJCtYaTWIAty1o886I2xlkZTx4HoD+dQtkvxmjVVZXX7KXI7UNIlnXukvbc7Twd/T86rW3Z94efbE3eLDk0KbtMsR2ppqp72M7eaS11C416Q93ZXndxnDt3/doD/vSQpiujbL/AK7lHRP/AA0EGj2scu4yq5PgFAyaFatoUxuS9qAUP8CNgg/KpYdLSA977OF+c2459eKfe6daz3KzXF7czSqo2hXCLt8gBzj6+NOnGPRln5U30UYtH2HfdFIowOWkbpVeTVbG1uBa6cntV4eFLqQoPp51dmt7U43ptVedwck4HTBOajghs7Sb2mKACYE4lkIZ16889PPpXKzPGDNZKyXRk70XUuqPPcxNIXOZAQEKtjptPh05qxaC/uJVjjmnVRwNx9371qZ9UDq6tIxk27W7tATz4VVnuJ5B+7wykF/ez7ox6dKZzb6RnVLTzkH3OizSj99vmMY4kjAP1qna6Ta2ls8dwBKQ/uH0ohcR3zlGMgiCnOxuQaglt5nTYocjyRMCipPrI/xrsD38ZNyHLDaBwB4CrWia+2k3KJJl4M5KD+HzP/VLJo1w+MR4+ZqrLpTx53HcfLFUzFrDAk4vKPRtNul1KHvoQJ4nHukgcdM5GPv40Pv+ykYv/arB5bO6z7kiNxn/AI9DWS02/v8ASGIhTfCeWhkztb1863eidqNOvFSOaU2k7+7slJUFsYADdMZ+VZnCUHmBV6z/ACGd+ssI03XtgmlyAQu0M3jjyboaAtZan2bujJp/49nJ/iQuMo4+XgfX9a0/aDR/2kveHBaAZRSfhfOT5Zobb31zaLs71fh5inxhvXPT700bv2dGco8S6K99ptpZWkUsURitrpi0QPDRt4rny6kURuYx2t0JkUoNWsBklh/ip4/f9RTdXvjrSWdhcyW1nDu3xy843eh6EeeDQlLiXQtQiuIpIpXi91xHIGWRT1GfX++lTs5e0ezZ8kPIq0b5KGmN7Bo13qUYTvonNssKj4C+QXJ8cc1HYTT2DBQrNA3vFA2A1abULS2vNEgl0hEZJZjNNtTDZxgBh4kdPrWf07vzqDRy5CBS239KEZqTf7PH0lCWGa/TLiIRpP3e1yOeNuPp5+tEf2j6JQKFugOM+vhVnI/m/OqJYRsPXMoOgFcWBGNuR6Ug+lOyK1sygrU9Iiu4pCheOQrgMTkCvMtd7P8A7O1ApBKIUZc7j0OeDkfWvYHYY2noayut9mjqMpkW+lXw27QfHPXg1ivpy04lq9cNSPPH0+1RFBDMMYJVsbvX86me+2wiOBB7hykQ90bftWh/8JuYyQkqMuc+8DXf+MTJw8gPoopVBorHRdGWNxOwcJC43MPUYpO5vZAoAjXaCAWJYgH/ANVsIez0m7AjPzIxU6dn5R/Ei/LmmSYXJGLTTZ35knJ8kjQDH3zT00e0iILrkj+d9xzW1PZ1ujO7HyPA+1KuhFD7gRfQLXYkDKMpFZIBiCBvQAYFP9gfODIiZ/l5Nas6K/qfnThozDjA/T9K7WR20TKppUStuYM7+Bfr9KmGnyHoqhfUc/7Vp10op/DUi2RXjZ9uKOrBsjMDR9/xLn/McVLHoMTcMFGP5ea0gs2bqAPkakWyx15oqDBsjNns/akYMYJ+gqOfsbYXMewwlfMocVr47YL0/T/enlVXqR8j1o6sGxk7fs7qFpai2sr1JY16LcRlmA8tykZ48TmhmoaBr3eSPp0NirMAA7SMxUjxxjHj4+Vb4zRgYBJPliomulwfSg4pPIdmzyPSdKvOzxMWr6n7PwWSPJI5z9z44HjVJ11DVbmGH2YRwrGffRASWx1I6+XnXrlzfwdJHTA8Dg0Hubq1kyIkJ/ypgfkKVy5bxliwqxLbJh9JstV058qcKfiRhwT+tEpLafJmeOOIvjcR4/SjbqpGWQgebEAfnULrFtAPdDyzlh9KmsbbY5NEvbsoW9sjEGSVz6LVz2W1/kk+5qUSR8Dc30wtd3ifyn/UapuxNT09+mai3HOK6urWzIiUKNvSmSOVGBiurq44ULuGSTTCAp4FdXVzQUNkwMcZ+dKUUIDgV1dQwBMXYoQED6VygV1dRSFyLgUmBXV1EZCCNWzkUhjUc811dQOEIABwKE6ney22BEFGfMZrq6kn0Uh2UGvp2UMz+PToKqXuoTQhQoQ58xXV1Z2+C2OSl7bcTHaZSo/p4pGG7/ELP/mY0ldSobA0YB2oqrjyUVXuJ5ECnOcnnJrq6uGFJLAMetVZ3KZx4+tLXUEAjDP3CsHYb85A48a7J/mb/Ua6upjj/9k=)
+    background-size: cover;
+    background-position: center;
+}
+
+.inner {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<!-- ================= BREAKFAST MENU ================= -->
-<div style="
-    height:550px;
-    width:400px;
-    margin:20px auto;
-    border:3px solid #333;
-    padding:20px;
-    background-image:url('https://i.imgur.com/1cXQF3H.jpeg');
-    background-size:cover;
-    background-position:center;
-">
+<!-- BREAKFAST MENU -->
+<div class="menu">
+    <div class="inner">
+        <h1>Breakfast Menu</h1>
 
-    <h1>Breakfast Menu</h1>
+        <h2>Sandwiches</h2>
+        <ul>
+            <li>Bacon, Egg & Cheese — $5.99</li>
+            <li>Sausage Breakfast Melt — $6.49</li>
+            <li>Ham & Swiss Morning Sandwich — $5.79</li>
+        </ul>
 
-    <h2>Sandwiches</h2>
-    <ul>
-        <li>Bacon, Egg & Cheese — $5.99</li>
-        <li>Sausage Breakfast Melt — $6.49</li>
-        <li>Ham & Swiss Morning Sandwich — $5.79</li>
-    </ul>
-
-    <h2>Beverages</h2>
-    <ul>
-        <li>Fresh Brewed Coffee — $2.00</li>
-        <li>Orange Juice — $2.50</li>
-        <li>Hot Tea — $1.75</li>
-    </ul>
-
+        <h2>Beverages</h2>
+        <ul>
+            <li>Fresh Brewed Coffee — $2.00</li>
+            <li>Orange Juice — $2.50</li>
+            <li>Hot Tea — $1.75</li>
+        </ul>
+    </div>
 </div>
 
+<!-- LUNCH MENU -->
+<div class="menu">
+    <div class="inner">
+        <h1>Lunch Menu</h1>
 
-<!-- ================= LUNCH MENU ================= -->
-<div style="
-    height:550px;
-    width:400px;
-    margin:20px auto;
-    border:3px solid #333;
-    padding:20px;
-    background-image:url('https://i.imgur.com/7mQ0z0C.jpeg');
-    background-size:cover;
-    background-position:center;
-">
+        <h2>Sandwiches</h2>
+        <ul>
+            <li>Classic Turkey Club — $8.99</li>
+            <li>Italian Sub — $9.49</li>
+            <li>Chicken Bacon Ranch — $9.99</li>
+            <li>Veggie Delight — $7.49</li>
+        </ul>
 
-    <h1>Lunch Menu</h1>
+        <h2>Sides</h2>
+        <ul>
+            <li>Potato Chips — $1.50</li>
+            <li>Macaroni Salad — $2.50</li>
+            <li>Pickle Spear — $0.99</li>
+        </ul>
 
-    <h2>Sandwiches</h2>
-    <ul>
-        <li>Classic Turkey Club — $8.99</li>
-        <li>Italian Sub — $9.49</li>
-        <li>Chicken Bacon Ranch — $9.99</li>
-        <li>Veggie Delight — $7.49</li>
-    </ul>
-
-    <h2>Sides</h2>
-    <ul>
-        <li>Potato Chips — $1.50</li>
-        <li>Macaroni Salad — $2.50</li>
-        <li>Pickle Spear — $0.99</li>
-    </ul>
-
-    <h2>Beverages</h2>
-    <ul>
-        <li>Soda — $1.99</li>
-        <li>Iced Tea — $2.25</li>
-        <li>Bottled Water — $1.50</li>
-    </ul>
-
+        <h2>Beverages</h2>
+        <ul>
+            <li>Soda — $1.99</li>
+            <li>Iced Tea — $2.25</li>
+            <li>Bottled Water — $1.50</li>
+        </ul>
+    </div>
 </div>
 
+<!-- DINNER MENU -->
+<div class="menu">
+    <div class="inner">
+        <h1>Dinner Menu</h1>
 
-<!-- ================= DINNER MENU ================= -->
-<div style="
-    height:550px;
-    width:400px;
-    margin:20px auto;
-    border:3px solid #333;
-    padding:20px;
-    background-image:url('https://i.imgur.com/4yX8x0E.jpeg');
-    background-size:cover;
-    background-position:center;
-">
+        <h2>Signature Sandwiches</h2>
+        <ul>
+            <li>Steak & Cheese Hoagie — $11.99</li>
+            <li>BBQ Pulled Pork Sandwich — $10.49</li>
+            <li>Grilled Chicken Pesto — $10.99</li>
+            <li>Roast Beef Melt — $11.49</li>
+        </ul>
 
-    <h1>Dinner Menu</h1>
+        <h2>Combos</h2>
+        <ul>
+            <li>Sandwich + Chips + Drink — Add $3.99</li>
+            <li>Sandwich + Soup + Drink — Add $5.49</li>
+        </ul>
 
-    <h2>Signature Sandwiches</h2>
-    <ul>
-        <li>Steak & Cheese Hoagie — $11.99</li>
-        <li>BBQ Pulled Pork Sandwich — $10.49</li>
-        <li>Grilled Chicken Pesto — $10.99</li>
-        <li>Roast Beef Melt — $11.49</li>
-    </ul>
-
-    <h2>Combos</h2>
-    <ul>
-        <li>Sandwich + Chips + Drink — Add $3.99</li>
-        <li>Sandwich + Soup + Drink — Add $5.49</li>
-    </ul>
-
-    <h2>Beverages</h2>
-    <ul>
-        <li>Lemonade — $2.50</li>
-        <li>Sweet Tea — $2.50</li>
-        <li>Root Beer — $2.25</li>
-    </ul>
-
+        <h2>Beverages</h2>
+        <ul>
+            <li>Lemonade — $2.50</li>
+            <li>Sweet Tea — $2.50</li>
+            <li>Root Beer — $2.25</li>
+        </ul>
+    </div>
 </div>
 
 </body>
