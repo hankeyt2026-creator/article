@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snowman Puzzle – Tristan</title>
+
+<style>
+
+/* --- GRID LAYOUT --- */
+body {
+  font-family: Arial, sans-serif;
+  background: #eef7ff;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section {
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+/* --- FLEX PUZZLE --- */
+.flex-puzzle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: auto;
+}
+
+.flex-puzzle img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* Hide the incorrect piece */
+.hidden-piece {
+  display: none;
+}
+
+/* Section styling */
+.intro { background: #dff3ff; }
+.puzzle { background: #ffffff; }
+.explanation { background: #e8ffe8; }
+
+</style>
+</head>
+
+<body>
+
+<div class="grid-container">
+
+  <!-- SECTION 1: Name, Puzzle, Date -->
+  <header class="section intro">
+    <h1>Tristan</h1>
+    <h2>Snowman Puzzle</h2>
+    <p>Date Completed: April 15, 2026</p>
+  </header>
+
+  <!-- SECTION 2: Puzzle Assembly -->
+  <section class="section puzzle">
+    <h2>Puzzle Assembly</h2>
+
+    <div class="flex-puzzle">
+
+      <!-- Replace filenames with your actual snowman piece names -->
+      <img src="images/snowman1.png" alt="piece 1">
+      <img src="images/snowman2.png" alt="piece 2">
+      <img src="images/snowman3.png" alt="piece 3">
+      <img src="images/snowman4.png" alt="piece 4">
+      <img src="images/snowman5.png" alt="piece 5">
+      <img src="images/snowman6.png" alt="piece 6">
+      <img src="images/snowman7.png" alt="piece 7">
+      <img src="images/snowman8.png" alt="piece 8">
+
+      <!-- Wrong piece (hidden) -->
+      <img src="images/snowman-wrong.png" class="hidden-piece" alt="wrong piece">
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: Explanation -->
+  <section class="section explanation">
+    <h2>Flex Properties Used</h2>
+    <p>
+      I used <strong>display: flex</strong> to create a flex container and 
+      <strong>flex-wrap: wrap</strong> to allow the puzzle pieces to form rows. 
+      The puzzle pieces are arranged in the correct order inside the flex container. 
+      The incorrect puzzle piece is included in the HTML but hidden using 
+      <strong>display: none</strong>. CSS Grid is used to structure the page into 
+      multiple sections for the name, puzzle, and explanation.
+    </p>
+  </section>
+
+</div>
+
+</body>
+</html>
 
