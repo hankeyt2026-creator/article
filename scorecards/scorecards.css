@@ -1,1 +1,76 @@
+/* Shared styling for all scorecards */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Pseudo-class requirement */
+tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,0.05);
+}
+
+tr:hover {
+    background-color: rgba(0,0,0,0.15);
+}
+
+/* ---------------------------- */
+/* SPORT THEMES                 */
+/* ---------------------------- */
+
+/* Golf: greens + sand */
+.golf th {
+    background-color: #2e7d32;
+    color: white;
+}
+.golf tr:nth-of-type(odd) {
+    background-color: #c8e6c9;
+}
+.golf tr:nth-of-type(even) {
+    background-color: #fff8e1;
+}
+
+/* Baseball: red, white, navy */
+.baseball th {
+    background-color: #0d47a1;
+    color: white;
+}
+.baseball tr:nth-of-type(odd) {
+    background-color: #ffebee;
+}
+.baseball tr:nth-of-type(even) {
+    background-color: #e3f2fd;
+}
+
+/* Bowling: neon cosmic colors */
+.bowling th {
+    background-color: #6a1b9a;
+    color: #ffea00;
+}
+.bowling tr:nth-of-type(odd) {
+    background-color: #f3e5f5;
+}
+.bowling tr:nth-of-type(even) {
+    background-color: #e8f5e9;
+}
 
