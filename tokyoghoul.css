@@ -42,21 +42,6 @@ nav ul li a {
     padding: 220px 20px 40px 20px; /* pushes content below nav bar */
     width: 70%;
 }
-/* BANNER ABOVE NAV BAR */
-.banner {
-    width: 100%;
-    background-color: #000; /* helps blend edges */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    max-height: 260px; /* adjust this to make it taller/shorter */
-    object-fit: cover;
-}
 /* HEADER SECTION */
 .site-header {
     width: 100%;
@@ -70,19 +55,21 @@ nav ul li a {
 }
 
 .site-header h1 {
-    color: white;
-    font-size: 42px;
-    letter-spacing: 3px;
     margin: 0;
+    font-size: 42px;
     font-weight: 900;
+    letter-spacing: 3px;
 }
+
+/* Red underline */
 .header-accent {
     width: 60%;
     height: 4px;
     background-color: #c40000;
     margin: 15px auto 0 auto;
 }
-/* GLITCH EFFECT — slowed down, white main text + subtle red ghosting */
+
+/* CLEAN GLITCH — white text + subtle red ghost, slow animation */
 .glitch-title {
     position: relative;
     display: inline-block;
@@ -95,23 +82,23 @@ nav ul li a {
     position: absolute;
     left: 0;
     top: 0;
-    color: #c40000;      /* subtle red */
-    opacity: 0.35;       /* softer */
-    animation: glitchRed 6s infinite; /* slowed way down */
+    color: #c40000;
+    opacity: 0.35;
+    animation: glitchRed 6s infinite;
 }
 
-/* WHITE ghost shimmer layer */
+/* WHITE shimmer layer */
 .glitch-title::after {
     content: "TOKYO GHOUL SYMBOLISM HUB";
     position: absolute;
     left: 0;
     top: 0;
     color: white;
-    opacity: 0.25;       /* subtle shimmer */
-    animation: glitchWhite 8s infinite; /* even slower */
+    opacity: 0.25;
+    animation: glitchWhite 8s infinite;
 }
 
-/* Red glitch movement */
+/* Red ghost movement */
 @keyframes glitchRed {
     0%   { transform: translate(0, 0); }
     20%  { transform: translate(-1px, -1px); }
