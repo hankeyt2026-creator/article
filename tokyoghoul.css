@@ -2,8 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #111;
-    color: white;
+    background-color: #fafafa; /* clean, almost-white background */
+    color: black; /* switch text to black so it's readable */
     font-family: Arial, sans-serif;
 }
 
