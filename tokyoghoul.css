@@ -13,7 +13,7 @@ nav {
     border-bottom: 4px solid #c40000; /* Tokyo Ghoul red */
     padding: 10px 0;
     position: fixed;
-    top: 250px;
+    top: 120px;
     width: 100%;
     z-index: 10;
 }
@@ -39,7 +39,7 @@ nav ul li a {
 
 /* MAIN CONTENT */
 .content {
-    padding: 380px 20px 40px 20px; /* pushes content below nav bar */
+    padding: 220px 20px 40px 20px; /* pushes content below nav bar */
     width: 70%;
 }
 /* BANNER ABOVE NAV BAR */
@@ -56,5 +56,72 @@ nav ul li a {
     height: auto;
     max-height: 260px; /* adjust this to make it taller/shorter */
     object-fit: cover;
+}
+/* HEADER SECTION */
+.site-header {
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 40px 0 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.site-header h1 {
+    color: white;
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin: 0;
+    font-weight: 900;
+}
+.header-accent {
+    width: 60%;
+    height: 4px;
+    background-color: #c40000;
+    margin: 15px auto 0 auto;
+}
+/* GLITCH EFFECT */
+.glitch-title {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-title::before,
+.glitch-title::after {
+    content: "TOKYO GHOUL SYMBOLISM HUB";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+}
+
+.glitch-title::before {
+    color: #c40000;
+    animation: glitch1 2s infinite;
+}
+
+.glitch-title::after {
+    color: #4444ff;
+    animation: glitch2 2.5s infinite;
+}
+
+@keyframes glitch1 {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, -2px); }
+    40% { transform: translate(2px, 2px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes glitch2 {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(2px, 1px); }
+    40% { transform: translate(-2px, -1px); }
+    60% { transform: translate(1px, -2px); }
+    80% { transform: translate(-1px, 2px); }
+    100% { transform: translate(0, 0); }
 }
 
