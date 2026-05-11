@@ -13,7 +13,7 @@ nav {
     border-bottom: 4px solid #c40000; /* Tokyo Ghoul red */
     padding: 10px 0;
     position: fixed;
-    top: 0;
+    top: 250px;
     width: 100%;
     z-index: 10;
 }
@@ -39,7 +39,7 @@ nav ul li a {
 
 /* MAIN CONTENT */
 .content {
-    padding: 120px 20px 40px 20px; /* pushes content below nav bar */
+    padding: 380px 20px 40px 20px; /* pushes content below nav bar */
     width: 70%;
 }
 /* BANNER ABOVE NAV BAR */
