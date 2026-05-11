@@ -7,41 +7,8 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* NAV BAR */
-nav {
-    background-color: black;
-    border-bottom: 4px solid #c40000; /* Tokyo Ghoul red */
-    padding: 10px 0;
-    position: fixed;
-    top: 120px;
-    width: 100%;
-    z-index: 10;
-}
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
 
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    font-weight: 800; /* thick text */
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* MAIN CONTENT */
-.content {
-    padding: 220px 20px 40px 20px; /* pushes content below nav bar */
-    width: 70%;
-}
 /* HEADER SECTION */
 .site-header {
     width: 100%;
@@ -115,4 +82,38 @@ nav ul li a {
     50%  { transform: translate(-1px, 0); }
     75%  { transform: translate(0, 1px); }
     100% { transform: translate(0, 0); }
+}
+/* NAV BAR */
+nav {
+    background-color: black;
+    border-bottom: 4px solid #c40000; /* Tokyo Ghoul red */
+    padding: 10px 0;
+    position: fixed;
+    top: 120px;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 800; /* thick text */
+    text-decoration: none;
+    font-size: 18px;
+}
+/* MAIN CONTENT */
+.content {
+    padding: 220px 20px 40px 20px; /* pushes content below nav bar */
+    width: 70%;
 }
