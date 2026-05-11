@@ -42,4 +42,19 @@ nav ul li a {
     padding: 120px 20px 40px 20px; /* pushes content below nav bar */
     width: 70%;
 }
+/* BANNER ABOVE NAV BAR */
+.banner {
+    width: 100%;
+    background-color: #000; /* helps blend edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 260px; /* adjust this to make it taller/shorter */
+    object-fit: cover;
+}
 
