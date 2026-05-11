@@ -43,22 +43,3 @@ nav ul li a {
     width: 70%;
 }
 
-/* RIGHT-SIDE IMAGE */
-.side-image {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 15%; /* about 15% of screen */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 80px; /* keeps it below nav bar */
-    z-index: 1;
-}
-
-.side-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
