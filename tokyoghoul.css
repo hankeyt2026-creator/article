@@ -45,7 +45,7 @@ body {
 
 /* RED ghost layer */
 .glitch-title::before {
-    content: "TOKYO GHOUL SYMBOLISM HUB";
+    content: "TOKYO GHOUL";
     position: absolute;
     left: 0;
     top: 0;
@@ -56,7 +56,7 @@ body {
 
 /* WHITE shimmer layer */
 .glitch-title::after {
-    content: "TOKYO GHOUL SYMBOLISM HUB";
+    content: "TOKYO GHOUL";
     position: absolute;
     left: 0;
     top: 0;
