@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: #cfe8ff; /* light blue */
+  border-bottom: 1px solid #9ac7f5;
+  padding: 0 20px;
+}
+
+/* Flex layout for nav items */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #003a70; /* dark blue */
+  font-weight: 600;
+  padding: 15px 0;
+  display: block;
+}
+
+.navbar a:hover {
+  color: #005bb5;
+}
