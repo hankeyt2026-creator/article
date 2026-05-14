@@ -34,3 +34,10 @@ body {
 .navbar a:hover {
   color: #005bb5;
 }
+.site-title {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  margin: 30px 0 10px 0;
+  color: #003a70; /* dark blue to match your theme */
+}
