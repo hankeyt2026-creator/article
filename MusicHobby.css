@@ -4,6 +4,21 @@ body {
   background-color: #d9d2c6; /* grayish beige */
 }
 
+/* Title section background */
+.title-section {
+  background-color: #f2f4f7; /* steely white */
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Title text */
+.site-title {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: #003a70; /* dark blue to match your theme */
+}
 
 /* Navbar container */
 .navbar {
@@ -35,11 +50,4 @@ body {
 
 .navbar a:hover {
   color: #005bb5;
-}
-.site-title {
-  font-size: 48px;
-  font-weight: 900;
-  text-align: center;
-  margin: 30px 0 10px 0;
-  color: #003a70; /* dark blue to match your theme */
 }
