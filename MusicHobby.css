@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #d9d2c6; /* grayish beige */
 }
+
 
 /* Navbar container */
 .navbar {
